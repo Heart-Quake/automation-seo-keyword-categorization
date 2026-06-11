@@ -1,0 +1,8 @@
+.runtime/
+.playwright-cli/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+.streamlit/secrets.toml
