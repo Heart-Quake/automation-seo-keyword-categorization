@@ -18,7 +18,6 @@ from app import scraping
 
 
 st.set_page_config(page_title="Keyword Categorization App", layout="wide")
-apply_automation_seo_theme()
 
 
 def _suggest(label: str, help_text: str = ""):
@@ -180,6 +179,7 @@ def sidebar_controls():
 
 
 def main():
+    apply_automation_seo_theme()
     i18n = config.I18N.get("fr", {})
     st.title("Keyword Categorization App")
 
