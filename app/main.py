@@ -2,6 +2,7 @@
 Application Streamlit principale pour Keyword Categorization App
 """
 
+import importlib
 import os
 import gzip
 import zipfile
@@ -10,11 +11,14 @@ from typing import List, Optional, Tuple
 import pandas as pd
 import streamlit as st
 
-from automation_seo_theme import apply_automation_seo_theme
+import automation_seo_theme
 from app import config
 from app import utils
 from app import clustering
 from app import scraping
+
+automation_seo_theme = importlib.reload(automation_seo_theme)
+apply_automation_seo_theme = automation_seo_theme.apply_automation_seo_theme
 
 
 st.set_page_config(page_title="Keyword Categorization App", layout="wide")
