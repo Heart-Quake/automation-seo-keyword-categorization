@@ -10,6 +10,7 @@ from typing import List, Optional, Tuple
 import pandas as pd
 import streamlit as st
 
+from automation_seo_theme import apply_automation_seo_theme
 from app import config
 from app import utils
 from app import clustering
@@ -17,6 +18,7 @@ from app import scraping
 
 
 st.set_page_config(page_title="Keyword Categorization App", layout="wide")
+apply_automation_seo_theme()
 
 
 def _suggest(label: str, help_text: str = ""):
