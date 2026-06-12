@@ -181,7 +181,16 @@ def sidebar_controls():
 def main():
     apply_automation_seo_theme()
     i18n = config.I18N.get("fr", {})
-    st.title("Keyword Categorization App")
+    st.markdown(
+        """
+        <section class="tool-hero">
+            <div class="tool-kicker">Keyword intelligence</div>
+            <h1 class="tool-title">Keyword Categorization App</h1>
+            <p class="tool-lead">Classe les listes de mots-cles par familles, intentions et regles metier pour preparer les exports SEO.</p>
+        </section>
+        """,
+        unsafe_allow_html=True,
+    )
 
     # Étape 1 — Import CSV / ZIP
     st.subheader("1️⃣ Importer un fichier de mots-clés")
